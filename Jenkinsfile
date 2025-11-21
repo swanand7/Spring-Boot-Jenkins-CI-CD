@@ -10,12 +10,13 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 git branch: 'main',
-                    changelog: false,
-                    poll: false,
-                    url: 'https://github.com/AbderrahmaneOd/Spring-Boot-Jenkins-CI-CD',
-                    credentialsId: 'github-token'
+                    credentialsId: 'github-token',
+                    changelog: false, 
+                    poll: false, 
+                    url: 'https://github.com/AbderrahmaneOd/Spring-Boot-Jenkins-CI-CD'
             }
         }
+
         
 
         stage('Clean & Package') {
